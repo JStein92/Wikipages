@@ -1,0 +1,21 @@
+﻿@model Wikipages.Models.Business
+@{
+    ViewData["Title"] = "Wikipages";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Business</h2>
+<br />
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name);
+    @Html.TextBoxFor(model => model.Name);
+
+    @Html.LabelFor(model => model.Business_Type_Id);
+    @Html.TextBoxFor(model => model.Business_Type_Id);
+
+    <input type="submit" name="name" value="Add new Business" />
+
+}
+
+<p>@Html.ActionLink("Back", "Index")</p>

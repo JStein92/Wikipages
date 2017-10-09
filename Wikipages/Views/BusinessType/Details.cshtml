@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Wikipages";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<Wikipages.Models.Business>
+
+<h2>Businesses Of Type Selected</h2>
+<br />
+<h4>@Html.DisplayNameFor(model => model.Name)</h4>
+<ul>
+    @foreach (var business in Model)
+    {
+        <li>@Html.DisplayFor(modelBusiness => business.Name)</li>
+    }
+    
+</ul>
+<p>@Html.ActionLink("Create new Business", "CreateBusiness")</p>
+
+<p>@Html.ActionLink("Back", "Index")

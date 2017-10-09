@@ -53,7 +53,7 @@ namespace Wikipages
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=BusinessType}/{action=Index}/{id?}");
             });
         }
     }
